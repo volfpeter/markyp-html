@@ -1,5 +1,7 @@
 """
-Table components.
+HTML table elements.
+
+See http://www.wikiwand.com/en/HTML_element#/Tables.
 """
 
 from markyp.elements import Element
