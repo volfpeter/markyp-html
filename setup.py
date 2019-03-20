@@ -22,7 +22,7 @@ setup(
     author_email="do.volfp@gmail.com",
     license="MIT",
     classifiers=[
-        "Development Status :: 5 - Production/Stable",
+        "Development Status :: 4 - Beta",
         "Intended Audience :: Developers",
         "License :: OSI Approved :: MIT License",
         "Natural Language :: English",
@@ -38,7 +38,7 @@ setup(
         "Topic :: Utilities",
         "Typing :: Typed"
     ],
-    keywords="html markup generator feed utility",
+    keywords="html markup generator utility",
     package_dir={"": "src"},
     packages=find_packages("src", exclude=["test"]),
     python_requires=">=3.6",
