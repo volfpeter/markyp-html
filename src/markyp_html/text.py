@@ -1,5 +1,5 @@
 """
-HTML heading elements.
+HTML text elements (headings and paragraphs).
 """
 
 from markyp.elements import Element
@@ -55,5 +55,14 @@ class h6(Element):
     `<h6></h6>` element.
 
     See https://www.w3schools.com/tags/tag_hn.asp.
+    """
+    __slots__ = ()
+
+
+class p(Element):
+    """
+    `<p></p>` element.
+
+    See https://www.w3schools.com/tags/tag_p.asp.
     """
     __slots__ = ()
