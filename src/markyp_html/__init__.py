@@ -49,7 +49,8 @@ class body(Element):
     """
     __slots__ = ()
 
-class base(Element):
+
+class base(StandaloneElement):
     """
     `<base></base>` element.
 
@@ -58,7 +59,7 @@ class base(Element):
     __slots__ = ()
 
 
-class title(Element):
+class title(StringElement):
     """
     `<title></title>` element.
 
@@ -96,7 +97,7 @@ class script(StringElement):
 
     def __str__(self) -> str:
         value = self.value or ""
-        return f"<script {format_properties(self.properties)}>{value}</script>"
+        return f"<script {format_properties(self.properties)}>\n{value}\n</script>"
 
 
 class style(StringElement):
@@ -110,7 +111,7 @@ class style(StringElement):
 
     def __str__(self) -> str:
         value = self.value or ""
-        return f"<style {format_properties(self.properties)}>{value}</style>"
+        return f"<style {format_properties(self.properties)}>\n{value}\n</style>"
 
 
 def webpage(*body_elements: ElementType,
