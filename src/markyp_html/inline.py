@@ -102,6 +102,20 @@ class data(InlineElement):
     __slots__ = ()
 
 
+class del_(InlineElement):
+    """
+    `<del></del>` element.
+
+    See https://www.w3schools.com/tags/tag_del.asp.
+    """
+
+    __slots__ = ()
+
+    @property
+    def element_name(self) -> str:
+        return "del"
+
+
 class dfn(InlineElement):
     """
     `<dfn></dfn>` element.

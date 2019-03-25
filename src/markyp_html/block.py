@@ -5,7 +5,7 @@ See http://www.wikiwand.com/en/HTML_element#/Block_elements.
 """
 
 from markyp.formatters import format_element_sequence, format_properties
-from markyp.elements import Element, StandaloneElement
+from markyp.elements import Element, EmptyElement, StandaloneElement
 
 
 class address(Element):
@@ -44,20 +44,6 @@ class blockquote(Element):
     __slots__ = ()
 
 
-class del_(Element):
-    """
-    `<del></del>` element.
-
-    See https://www.w3schools.com/tags/tag_del.asp.
-    """
-
-    __slots__ = ()
-
-    @property
-    def element_name(self) -> str:
-        return "del"
-
-
 class div(Element):
     """
     `<div></div>` element.
@@ -82,7 +68,12 @@ class figcaption(Element):
 
     See https://www.w3schools.com/tags/tag_figcaption.asp.
     """
+
     __slots__ = ()
+
+    @property
+    def inline_children(self) -> bool:
+        return True
 
 
 class footer(Element):
@@ -112,7 +103,7 @@ class hr(StandaloneElement):
     __slots__ = ()
 
 
-class iframe(Element):
+class iframe(EmptyElement):
     """
     `<iframe></iframe>` element.
 
