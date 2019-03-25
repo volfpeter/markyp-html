@@ -152,8 +152,11 @@ class img(StandaloneElement):
 
     __slots__ = ()
 
-    def __init__(self, *, src: str, alt: str, class_: Optional[str] = None, **kwargs: PropertyValue) -> None:
-        super().__init__(src=src, alt=alt, class_=class_, **kwargs)
+    def __init__(self, *, src: str, alt: Optional[str] = None, class_: Optional[str] = None, **kwargs: PropertyValue) -> None:
+        super().__init__(
+            **{"src": src, "alt": alt} if alt else {"src": src},
+            class_=class_, **kwargs
+        )
 
 
 class ins(InlineElement):
