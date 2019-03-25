@@ -10,6 +10,7 @@ from markyp import PropertyValue
 from markyp.elements import Element, StandaloneElement
 
 
+
 class InlineElement(Element):
     """
     Element that formats its children in-line.
@@ -17,6 +18,7 @@ class InlineElement(Element):
 
     __slots__ = ()
 
+    @property
     def inline_children(self) -> bool:
         return True
 
