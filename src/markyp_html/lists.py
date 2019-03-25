@@ -11,7 +11,12 @@ class li(Element):
 
     See https://www.w3schools.com/tags/tag_li.asp.
     """
+
     __slots__ = ()
+
+    @property
+    def inline_children(self) -> bool:
+        return True
 
 
 class ol(Element):
@@ -47,7 +52,12 @@ class dt(Element):
 
     See https://www.w3schools.com/tags/tag_dt.asp.
     """
+
     __slots__ = ()
+
+    @property
+    def inline_children(self) -> bool:
+        return True
 
 
 class dd(Element):
@@ -56,4 +66,9 @@ class dd(Element):
 
     See https://www.w3schools.com/tags/tag_dd.asp.
     """
+
     __slots__ = ()
+
+    @property
+    def inline_children(self) -> bool:
+        return True
