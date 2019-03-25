@@ -13,7 +13,12 @@ class caption(Element):
 
     See https://www.w3schools.com/tags/tag_caption.asp.
     """
+
     __slots__ = ()
+
+    @property
+    def inline_children(self) -> bool:
+        return True
 
 
 class table(Element):
@@ -67,7 +72,12 @@ class th(Element):
 
     See https://www.w3schools.com/tags/tag_th.asp.
     """
+
     __slots__ = ()
+
+    @property
+    def inline_children(self) -> bool:
+        return True
 
 
 class td(Element):
@@ -76,4 +86,9 @@ class td(Element):
 
     See https://www.w3schools.com/tags/tag_td.asp.
     """
+
     __slots__ = ()
+
+    @property
+    def inline_children(self) -> bool:
+        return True
