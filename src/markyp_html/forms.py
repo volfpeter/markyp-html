@@ -56,7 +56,7 @@ class optgroup(Element):
 
     __slots__ = ()
 
-    def __init__(self, *args: option, class_: Optional[str], **kwargs) -> None:
+    def __init__(self, *args: option, class_: Optional[str] = None, **kwargs) -> None:
         super().__init__(*args, class_=class_, **kwargs)
 
 
@@ -69,7 +69,7 @@ class datalist(Element):
 
     __slots__ = ()
 
-    def __init__(self, *args: option, class_: Optional[str], **kwargs) -> None:
+    def __init__(self, *args: option, class_: Optional[str] = None, **kwargs) -> None:
         super().__init__(*args, class_=class_, **kwargs)
 
 
