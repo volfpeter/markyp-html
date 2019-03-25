@@ -5,7 +5,19 @@ HTML text elements (headings and paragraphs).
 from markyp.elements import Element
 
 
-class h1(Element):
+class TextElement(Element):
+    """
+    Base class for text elements.
+    """
+
+    __slots__ = ()
+
+    @property
+    def inline_children(self) -> bool:
+        return True
+
+
+class h1(TextElement):
     """
     `<h1></h1>` element.
 
@@ -14,7 +26,7 @@ class h1(Element):
     __slots__ = ()
 
 
-class h2(Element):
+class h2(TextElement):
     """
     `<h2></h2>` element.
 
@@ -23,7 +35,7 @@ class h2(Element):
     __slots__ = ()
 
 
-class h3(Element):
+class h3(TextElement):
     """
     `<h3></h3>` element.
 
@@ -32,7 +44,7 @@ class h3(Element):
     __slots__ = ()
 
 
-class h4(Element):
+class h4(TextElement):
     """
     `<h4></h4>` element.
 
@@ -41,7 +53,7 @@ class h4(Element):
     __slots__ = ()
 
 
-class h5(Element):
+class h5(TextElement):
     """
     `<h5></h5>` element.
 
@@ -50,7 +62,7 @@ class h5(Element):
     __slots__ = ()
 
 
-class h6(Element):
+class h6(TextElement):
     """
     `<h6></h6>` element.
 
@@ -59,7 +71,7 @@ class h6(Element):
     __slots__ = ()
 
 
-class p(Element):
+class p(TextElement):
     """
     `<p></p>` element.
 
