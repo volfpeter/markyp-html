@@ -8,7 +8,43 @@ The project is listed on the Python Package Index, it can be installed simply by
 
 ## Getting started
 
-_TODO_
+The following very short example creates the most basic Hello World webpage. As you can see, all it takes is a single `webpage()` call and string conversion.
+
+```Python
+from markyp_html import webpage
+page = webpage("Hello World!", page_title="Hello World")
+
+# Get the actual HTML markup.
+html = str(page)  # or page.markup
+print(html)
+```
+
+Here is a slightly more sophisticated Hello World example, that contains all kinds of metadata, some CSS, and a couple of simple text elements:
+
+```Python
+from markyp_html import meta, style, webpage
+from markyp_html.text import h1, p
+from markyp_html.inline import strong
+
+page = webpage(
+    h1("markyp-html"),
+    strong(p("Hello World!")),
+    p("This page was generated using Python and markyp-html."),
+    page_title="markyp-html demo page",
+    head_elements=[style("h1 {color:red;}\np {color:blue;}")],
+    metadata=[
+        meta(charset="UTF-8"),
+        meta(name="author", content="Website Author"),
+        meta(name="description", content="markyp-html demo"),
+        meta(name="keywords", content="markyp-html,markup,Python,HTML"),
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    ]
+)
+
+# Get the actual HTML markup.
+html = str(page)  # or page.markup
+print(html)
+```
 
 ## Community guidelines
 
