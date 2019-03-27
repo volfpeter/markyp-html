@@ -38,6 +38,8 @@ def test_title():
 def test_link():
     assert link(rel="stylesheet", type="text/css", href="theme.css").markup ==\
         '<link rel="stylesheet" type="text/css" href="theme.css">'
+    assert link.css(href="theme.css").markup ==\
+        '<link rel="stylesheet" type="text/css" href="theme.css">'
 
 def test_meta():
     assert meta(name="viewport", content="width=device-width, initial-scale=1.0").markup ==\
@@ -46,6 +48,8 @@ def test_meta():
 def test_script():
     assert script('document.getElementById("demo").innerHTML = "Hello JavaScript!";').markup ==\
         '<script >\ndocument.getElementById("demo").innerHTML = "Hello JavaScript!";\n</script>'
+
+    assert script.ref("script.js").markup == '<script src="script.js"></script>'
 
 def test_style():
     assert style("h1 {color:red;}\np {color:blue;}").markup == '<style >\nh1 {color:red;}\np {color:blue;}\n</style>'
