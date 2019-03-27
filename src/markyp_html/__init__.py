@@ -74,7 +74,18 @@ class link(StandaloneElement):
 
     See https://www.w3schools.com/tags/tag_link.asp.
     """
+
     __slots__ = ()
+
+    @classmethod
+    def css(cls, href: str) -> "link":
+        """
+        Creates a CSS `link` element that references the specified stylesheet.
+
+        Arguments:
+            href: The location of the referenced stylesheet.
+        """
+        return cls(rel="stylesheet", type="text/css", href=href)
 
 
 class meta(StandaloneElement):
@@ -96,8 +107,21 @@ class script(StringElement):
     __slots__ = ()
 
     def __str__(self) -> str:
-        value = self.value or ""
-        return f"<script {format_properties(self.properties)}>\n{value}\n</script>"
+        if self.value:
+            return f"<script {format_properties(self.properties)}>\n{self.value}\n</script>"
+        else:
+            return f"<script {format_properties(self.properties)}></script>"
+
+    @classmethod
+    def ref(cls, src: str) -> "script":
+        """
+        Creates a `script` element that references a JavaScript document instead of
+        actually containing any JavaScript.
+
+        Arguments:
+            src: The location of the referenced script.
+        """
+        return cls("", src=src)
 
 
 class style(StringElement):
