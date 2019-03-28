@@ -33,11 +33,11 @@ page = webpage(
     page_title="markyp-html demo page",
     head_elements=[style("h1 {color:red;}\np {color:blue;}")],
     metadata=[
-        meta(charset="UTF-8"),
-        meta(name="author", content="Website Author"),
-        meta(name="description", content="markyp-html demo"),
-        meta(name="keywords", content="markyp-html,markup,Python,HTML"),
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta.author("Website Author"),
+        meta.charset("UTF-8"),
+        meta.description("markyp-html demo"),
+        meta.keywords("markyp-html,markup,Python,HTML"),
+        meta.viewport("width=device-width, initial-scale=1.0")
     ]
 )
 

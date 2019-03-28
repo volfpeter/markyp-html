@@ -45,6 +45,21 @@ def test_meta():
     assert meta(name="viewport", content="width=device-width, initial-scale=1.0").markup ==\
         '<meta name="viewport" content="width=device-width, initial-scale=1.0">'
 
+    assert meta.author("Joe").markup ==\
+        '<meta name="author" content="Joe">'
+    assert meta.charset("UTF-8").markup ==\
+        '<meta charset="UTF-8">'
+    assert meta.charset().markup ==\
+        '<meta charset="UTF-8">'
+    assert meta.description("Short description of the page").markup ==\
+        '<meta name="description" content="Short description of the page">'
+    assert meta.keywords("one, two, three").markup ==\
+        '<meta name="keywords" content="one, two, three">'
+    assert meta.viewport().markup ==\
+        '<meta name="viewport" content="width=device-width, initial-scale=1.0">'
+    assert meta.viewport("width=device-width, initial-scale=1.0").markup ==\
+        '<meta name="viewport" content="width=device-width, initial-scale=1.0">'
+
 def test_script():
     assert script('document.getElementById("demo").innerHTML = "Hello JavaScript!";').markup ==\
         '<script >\ndocument.getElementById("demo").innerHTML = "Hello JavaScript!";\n</script>'

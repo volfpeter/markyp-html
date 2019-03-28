@@ -96,6 +96,70 @@ class meta(StandaloneElement):
     """
     __slots__ = ()
 
+    @classmethod
+    def author(cls, author_name: str) -> "meta":
+        """
+        Creates an author `meta` element.
+
+        The `name` attribute of the created element will be `author` and
+        its `content` attribute will be the `author_name`.
+
+        Arguments:
+            author_name: The name of the author of the page.
+        """
+        return cls(name="author", content=author_name)
+
+    @classmethod
+    def charset(cls, charset_name: str = "UTF-8") -> "meta":
+        """
+        Creates a charset `meta` element, whose `charset` attribute will be `charset_name`.
+
+        Arguments:
+            charset_name: The name of the character set the page is using,
+                          the default value is `UTF-8`.
+        """
+        return cls(charset=charset_name)
+
+    @classmethod
+    def description(cls, desc: str) -> "meta":
+        """
+        Creates a description `meta` element.
+
+        The `name` attribute of the created element will be `description` and
+        its `content` attribute will be the `desc`.
+
+        Arguments:
+            desc: The short description of the page.
+        """
+        return cls(name="description", content=desc)
+
+    @classmethod
+    def keywords(cls, kwds: str) -> "meta":
+        """
+        Creates a keywords `meta` element.
+
+        The `name` attribute of the created element will be `keywords` and
+        its `content` attribute will be the `kwds`.
+
+        Arguments:
+            kwds: Keywords for search engines, comma separated list of words.
+        """
+        return cls(name="keywords", content=kwds)
+
+    @classmethod
+    def viewport(cls, spec: str = "width=device-width, initial-scale=1.0") -> "meta":
+        """
+        Creates a viewport `meta` element.
+
+        The `name` attribute of the created element will be `viewport` and
+        its `content` attribute will be the `spec`.
+
+        Arguments:
+            spec: The viewport settings to use, the default value is
+                  `width=device-width, initial-scale=1.0`.
+        """
+        return cls(name="viewport", content=spec)
+
 
 class script(StringElement):
     """
