@@ -2,7 +2,7 @@
 The base elements that are required in all HTML documents.
 """
 
-from typing import Optional, Sequence, Union
+from typing import Dict, Optional, Sequence, Union
 
 from markyp import ElementType, IElement
 from markyp.elements import Element, ElementSequence, StandaloneElement, StringElement
@@ -205,23 +205,29 @@ class style(StringElement):
 def webpage(*body_elements: ElementType,
             page_title: str,
             base_element: Optional[base] = None,
+            class_: Optional[str] = None,
             metadata: Sequence[meta] = (),
             head_elements: Sequence[Union[link, script, style]] = (),
-            javascript: Sequence[script] = ()) -> ElementSequence:
+            javascript: Sequence[script] = (),
+            **kwargs) -> ElementSequence:
     """
     Higher order component that composes a valid HTML page from the received arguments.
 
     The positional arguments of the method must be the elements that build up the
     actual webpage, i.e. the content to place inside the `<body></body>` HTML tag.
 
+    The keyword arguments that are not listed in the arguments section will be set
+    as attributes on the `body` element of the page.
+
     Arguments:
         page_title: The title of the webpage - mandatory keyword argument.
         base_element: The `base` element of the document that specifies the base URL/target
                       of relative URLs in the document.
+        class_: CSS class names to set on the `body` element.
         metadata: The list of `meta` elements that describe the webpage.
         head_elements: Other elements that should be included in the head of the page
                        such as links, styles, and scripts.
-        js_imports: `script` elements that import JavaScript packages such as JQuery
+        javascript: `script` elements that import JavaScript packages such as JQuery
                     or execute some JavaScript code.
     """
     return ElementSequence(
@@ -234,7 +240,9 @@ def webpage(*body_elements: ElementType,
             ),
             body(
                 *body_elements,
-                *javascript
+                *javascript,
+                class_=class_,
+                **kwargs
             )
         )
     )

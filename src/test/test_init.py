@@ -84,7 +84,9 @@ def test_webpage():
             ),
             javascript=(
                 script('document.getElementById("demo").innerHTML = "Hello JavaScript!";'),
-            )
+            ),
+            class_="my-fancy-html-body",
+            attr="body-attribute"
         ).markup == "\n".join((
             '<!DOCTYPE html>',
             '<html >',
@@ -95,7 +97,7 @@ def test_webpage():
             '<meta charset="UTF-8">',
             '<link rel="stylesheet" type="text/css" href="theme.css">',
             '</head>',
-            '<body >',
+            '<body attr="body-attribute" class="my-fancy-html-body">',
             'markyp-html webpage() test',
             'Should be successful.',
             '<script >\ndocument.getElementById("demo").innerHTML = "Hello JavaScript!";\n</script>',
