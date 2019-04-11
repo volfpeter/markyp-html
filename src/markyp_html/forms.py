@@ -100,6 +100,90 @@ class input_(StandaloneElement):
     def element_name(self) -> str:
         return "input"
 
+    @classmethod
+    def button(cls, class_: Optional[str] = None, **kwargs: PropertyValue) -> "input_":
+        """
+        Input element whose `type` is `button`.
+        """
+        return cls(class_=class_, type_="button", **kwargs)
+
+    @classmethod
+    def checkbox(cls, class_: Optional[str] = None, **kwargs: PropertyValue) -> "input_":
+        """
+        Input element whose `type` is `checkbox`.
+        """
+        return cls(class_=class_, type_="checkbox", **kwargs)
+
+    @classmethod
+    def email(cls, class_: Optional[str] = None, **kwargs: PropertyValue) -> "input_":
+        """
+        Input element whose `type` is `email`.
+        """
+        return cls(class_=class_, type_="email", **kwargs)
+
+    @classmethod
+    def file(cls, class_: Optional[str] = None, **kwargs: PropertyValue) -> "input_":
+        """
+        Input element whose `type` is `file`.
+        """
+        return cls(class_=class_, type_="file", **kwargs)
+
+    @classmethod
+    def hidden(cls, class_: Optional[str] = None, **kwargs: PropertyValue) -> "input_":
+        """
+        Input element whose `type` is `hidden`.
+        """
+        return cls(class_=class_, type_="hidden", **kwargs)
+
+    @classmethod
+    def number(cls, class_: Optional[str] = None, **kwargs: PropertyValue) -> "input_":
+        """
+        Input element whose `type` is `number`.
+        """
+        return cls(class_=class_, type_="number", **kwargs)
+
+    @classmethod
+    def password(cls, class_: Optional[str] = None, **kwargs: PropertyValue) -> "input_":
+        """
+        Input element whose `type` is `password`.
+        """
+        return cls(class_=class_, type_="password", **kwargs)
+
+    @classmethod
+    def radio(cls, class_: Optional[str] = None, **kwargs: PropertyValue) -> "input_":
+        """
+        Input element whose `type` is `radio`.
+        """
+        return cls(class_=class_, type_="radio", **kwargs)
+
+    @classmethod
+    def search(cls, class_: Optional[str] = None, **kwargs: PropertyValue) -> "input_":
+        """
+        Input element whose `type` is `search`.
+        """
+        return cls(class_=class_, type_="search", **kwargs)
+
+    @classmethod
+    def submit(cls, class_: Optional[str] = None, **kwargs: PropertyValue) -> "input_":
+        """
+        Input element whose `type` is `submit`.
+        """
+        return cls(class_=class_, type_="submit", **kwargs)
+
+    @classmethod
+    def text(cls, class_: Optional[str] = None, **kwargs: PropertyValue) -> "input_":
+        """
+        Input element whose `type` is `text`.
+        """
+        return cls(class_=class_, type_="text", **kwargs)
+
+    @classmethod
+    def time(cls, class_: Optional[str] = None, **kwargs: PropertyValue) -> "input_":
+        """
+        Input element whose `type` is `time`.
+        """
+        return cls(class_=class_, type_="time", **kwargs)
+
 
 class label(Element):
     """

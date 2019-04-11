@@ -43,6 +43,42 @@ def test_input_():
     assert str(input_(type_="submit", value="Submit")) ==\
         '<input value="Submit" type="submit">'
 
+    assert input_.button(name="input-1").markup ==\
+        '<input name="input-1" type="button">'
+
+    assert input_.checkbox(name="input-1").markup ==\
+        '<input name="input-1" type="checkbox">'
+
+    assert input_.email(name="input-1").markup ==\
+        '<input name="input-1" type="email">'
+
+    assert input_.file(name="input-1").markup ==\
+        '<input name="input-1" type="file">'
+
+    assert input_.hidden(name="input-1").markup ==\
+        '<input name="input-1" type="hidden">'
+
+    assert input_.number(name="input-1").markup ==\
+        '<input name="input-1" type="number">'
+
+    assert input_.password(name="input-1").markup ==\
+        '<input name="input-1" type="password">'
+
+    assert input_.radio(name="input-1").markup ==\
+        '<input name="input-1" type="radio">'
+
+    assert input_.search(name="input-1").markup ==\
+        '<input name="input-1" type="search">'
+
+    assert input_.submit(name="input-1").markup ==\
+        '<input name="input-1" type="submit">'
+
+    assert input_.text(name="input-1").markup ==\
+        '<input name="input-1" type="text">'
+
+    assert input_.time(name="input-1").markup ==\
+        '<input name="input-1" type="time">'
+
 def test_label():
     assert str(label("Label", form_id="form_1", input_id="input_1")) ==\
         '<label form="form_1" for="input_1">Label</label>'
