@@ -8,6 +8,7 @@ from markyp_html import DOCTYPE,\
                         meta,\
                         script,\
                         style,\
+                        join,\
                         webpage
 
 def test_DOCTYPE():
@@ -68,6 +69,16 @@ def test_script():
 
 def test_style():
     assert style("h1 {color:red;}\np {color:blue;}").markup == '<style >\nh1 {color:red;}\np {color:blue;}\n</style>'
+
+def test_join():
+    assert join() == ""
+    assert join(None, None, None, None, None) == ""
+    assert join("foo") == "foo"
+    assert join("foo", "bar", "baz") == "foo bar baz"
+    assert join(None, "foo", None, "bar", None, "baz", None) == "foo bar baz"
+
+    # Duplicates are not filtered.
+    assert join("foo", "foo") == "foo foo"
 
 def test_webpage():
     assert webpage(

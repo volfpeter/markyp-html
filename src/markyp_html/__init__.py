@@ -202,6 +202,18 @@ class style(StringElement):
         return f"<style {format_properties(self.properties)}>\n{value}\n</style>"
 
 
+def join(*args: Optional[str]) -> str:
+    """
+    Creates a string of space-separated entries from the given arguments.
+
+    `None`s are automatically skipped.
+
+    Typical use-case is to pass a set of CSS class names to this method to
+    retrieve the final value of the `class` attribute of an element.
+    """
+    return " ".join(s for s in args if s is not None)
+
+
 def webpage(*body_elements: ElementType,
             page_title: str,
             base_element: Optional[base] = None,
