@@ -7,6 +7,9 @@ See http://www.wikiwand.com/en/HTML_element#/Tables.
 from markyp.elements import Element
 
 
+__all__ = ("caption", "table", "thead", "tbody", "tfoot", "tr", "th", "td")
+
+
 class caption(Element):
     """
     `<caption></caption>` element.

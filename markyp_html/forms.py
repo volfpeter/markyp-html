@@ -10,6 +10,12 @@ from markyp import ElementType, PropertyValue
 from markyp.elements import Element, StandaloneElement
 
 
+__all__ = (
+    "form", "button", "option", "optgroup", "datalist", "fieldset", "input_",
+    "label", "legend", "meter", "output", "progress", "select", "textarea"
+)
+
+
 class form(Element):
     """
     `<form></form>` element.

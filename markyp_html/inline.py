@@ -10,6 +10,12 @@ from markyp import PropertyValue
 from markyp.elements import Element, StandaloneElement
 
 
+__all__ = (
+    "InlineElement", "a", "abbr", "b", "bdi", "bdo", "br", "cite", "code",
+    "data", "del_", "dfn", "em", "i", "img", "ins", "mark", "q", "s",
+    "samp", "small", "span", "strong", "sub", "sup", "u", "var", "wbr"
+)
+
 
 class InlineElement(Element):
     """

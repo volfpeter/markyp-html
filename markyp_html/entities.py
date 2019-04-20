@@ -5,6 +5,12 @@ HTML entities.
 from markyp import IElement
 
 
+__all__ = (
+    "Entity", "amp", "apos", "cent", "copy", "euro", "gt",
+    "lt", "nbsp", "pound", "quot", "reg", "times", "yen"
+)
+
+
 class Entity(IElement):
     """
     Class representing an HTML entity.

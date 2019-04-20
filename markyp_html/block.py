@@ -8,6 +8,13 @@ from markyp.formatters import format_element_sequence, format_properties
 from markyp.elements import Element, EmptyElement, StandaloneElement
 
 
+__all__ = (
+    "address", "article", "aside", "blockquote", "div", "figure",
+    "figcaption", "footer", "header", "hr", "iframe", "main",
+    "nav", "noscript", "pre", "section", "template"
+)
+
+
 class address(Element):
     """
     `<address></address>` element.
