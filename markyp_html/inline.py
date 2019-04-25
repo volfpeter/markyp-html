@@ -167,7 +167,7 @@ class img(StandaloneElement):
         )
 
     @classmethod
-    def placeholder(cls, w: int, h: int, *, text: str = "Placeholder", **kwargs: PropertyValue) -> "img":
+    def placeholder(cls, w: int, h: int, *, text: str = "Placeholder", class_: Optional[str] = None, **kwargs: PropertyValue) -> "img":
         """
         Create a placeholder image element using the https://placeholder.com/ API.
 
@@ -182,13 +182,14 @@ class img(StandaloneElement):
             w: The desired width of the element, minimum value is 10.
             h: The desired height of the element, minimum value is 10.
             text: Text to show on the placeholder image.
+            class_: CSS classes to apply on the image.
         """
         from urllib.parse import urlencode
         w, h = max(w, 10), max(h, 10)
-        kwargs["src"] = f"https://via.placeholder.com/{w}/{h}?{urlencode({'text': text})}"
+        kwargs["src"] = f"https://via.placeholder.com/{w}x{h}?{urlencode({'text': text})}"
         if "alt" not in kwargs:
             kwargs["alt"] = text
-        return img(**kwargs)
+        return img(class_=class_, **kwargs)
 
 
 class ins(InlineElement):
