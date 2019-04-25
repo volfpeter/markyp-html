@@ -54,13 +54,17 @@ def test_img():
         '<img src="smiley.gif" alt="Smiley face" height="42" width="42">'
     assert img(src="smiley.gif", height=42, width=42).markup ==\
         '<img src="smiley.gif" height="42" width="42">'
+    assert img(src="smiley.gif", class_="my-img", height=42, width=42).markup ==\
+        '<img src="smiley.gif" height="42" width="42" class="my-img">'
 
     assert img.placeholder(100, 200).markup ==\
-        '<img src="https://via.placeholder.com/100/200?text=Placeholder" alt="Placeholder">'
+        '<img src="https://via.placeholder.com/100x200?text=Placeholder" alt="Placeholder">'
     assert img.placeholder(1, 1).markup ==\
-        '<img src="https://via.placeholder.com/10/10?text=Placeholder" alt="Placeholder">'
+        '<img src="https://via.placeholder.com/10x10?text=Placeholder" alt="Placeholder">'
+    assert img.placeholder(100, 200, class_="my-img").markup ==\
+        '<img src="https://via.placeholder.com/100x200?text=Placeholder" alt="Placeholder" class="my-img">'
     assert img.placeholder(100, 200, text="/Escaped&text").markup ==\
-        '<img src="https://via.placeholder.com/100/200?text=%2FEscaped%26text" alt="/Escaped&text">'
+        '<img src="https://via.placeholder.com/100x200?text=%2FEscaped%26text" alt="/Escaped&text">'
 
 def test_ins():
     assert ins("newly inserted text").markup == "<ins >newly inserted text</ins>"
