@@ -1,31 +1,4 @@
-from markyp_html.inline import InlineElement,\
-                               a,\
-                               abbr,\
-                               b,\
-                               bdi,\
-                               bdo,\
-                               br,\
-                               cite,\
-                               code,\
-                               data,\
-                               del_,\
-                               dfn,\
-                               em,\
-                               i,\
-                               img,\
-                               ins,\
-                               mark,\
-                               q,\
-                               s,\
-                               samp,\
-                               small,\
-                               span,\
-                               strong,\
-                               sub,\
-                               sup,\
-                               u,\
-                               var,\
-                               wbr
+from markyp_html.inline import *
 
 def test_InlineElement():
     assert InlineElement("Text should be in-line with the tags.").markup ==\
@@ -81,6 +54,13 @@ def test_img():
         '<img src="smiley.gif" alt="Smiley face" height="42" width="42">'
     assert img(src="smiley.gif", height=42, width=42).markup ==\
         '<img src="smiley.gif" height="42" width="42">'
+
+    assert img.placeholder(100, 200).markup ==\
+        '<img src="https://via.placeholder.com/100/200?text=Placeholder" alt="Placeholder">'
+    assert img.placeholder(1, 1).markup ==\
+        '<img src="https://via.placeholder.com/10/10?text=Placeholder" alt="Placeholder">'
+    assert img.placeholder(100, 200, text="/Escaped&text").markup ==\
+        '<img src="https://via.placeholder.com/100/200?text=%2FEscaped%26text" alt="/Escaped&text">'
 
 def test_ins():
     assert ins("newly inserted text").markup == "<ins >newly inserted text</ins>"
