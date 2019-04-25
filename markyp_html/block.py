@@ -9,9 +9,9 @@ from markyp.elements import Element, EmptyElement, StandaloneElement
 
 
 __all__ = (
-    "address", "article", "aside", "blockquote", "div", "figure",
-    "figcaption", "footer", "header", "hr", "iframe", "main",
-    "nav", "noscript", "pre", "section", "template"
+    "address", "article", "aside", "blockquote", "div", "embed",
+    "figure", "figcaption", "footer", "header", "hr", "iframe",
+    "main", "nav", "noscript", "pre", "section", "template"
 )
 
 
@@ -56,6 +56,15 @@ class div(Element):
     `<div></div>` element.
 
     See https://www.w3schools.com/tags/tag_div.asp.
+    """
+    __slots__ = ()
+
+
+class embed(StandaloneElement):
+    """
+    `<embed>` element.
+
+    See https://www.w3schools.com/tags/tag_embed.asp.
     """
     __slots__ = ()
 

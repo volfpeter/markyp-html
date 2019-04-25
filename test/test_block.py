@@ -1,20 +1,4 @@
-from markyp_html.block import address,\
-                              article,\
-                              aside,\
-                              blockquote,\
-                              div,\
-                              figure,\
-                              figcaption,\
-                              footer,\
-                              header,\
-                              hr,\
-                              iframe,\
-                              main,\
-                              nav,\
-                              noscript,\
-                              pre,\
-                              section,\
-                              template
+from markyp_html.block import *
 
 def test_address():
     assert address("Contact info", hr(), "Circle Street 31415").markup ==\
@@ -35,6 +19,10 @@ def test_blockquote():
 def test_div():
     assert div("Part 1", hr(), "Part 2", class_="fancy-div").markup ==\
         '<div class="fancy-div">\nPart 1\n<hr >\nPart 2\n</div>'
+
+def test_embed():
+    assert embed(src="https://www.w3schools.com").markup ==\
+        '<embed src="https://www.w3schools.com">'
 
 def test_figure():
     assert figure("Content: for example an image", figcaption("Figure caption")).markup ==\
