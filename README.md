@@ -8,6 +8,8 @@ The project is listed on the Python Package Index, it can be installed simply by
 
 ## Getting started
 
+If you are not familiar with the basic concepts of `markyp`, please start by having a look at its documentation [here](https://github.com/volfpeter/markyp).
+
 The following very short example creates the most basic Hello World webpage. As you can see, all it takes is a single `webpage()` call and string conversion.
 
 ```Python
