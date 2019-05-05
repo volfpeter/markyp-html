@@ -97,7 +97,7 @@ class input_(StandaloneElement):
 
     __slots__ = ()
 
-    def __init__(self, class_: Optional[str] = None, type_: Optional[str] = None, **kwargs: PropertyValue) -> None:
+    def __init__(self, *, class_: Optional[str] = None, type_: Optional[str] = None, **kwargs: PropertyValue) -> None:
         if type_ is not None:
             kwargs["type"] = type_
         super().__init__(class_=class_, **kwargs)
@@ -289,4 +289,5 @@ class textarea(Element):
 
     See https://www.w3schools.com/tags/tag_textarea.asp.
     """
+
     __slots__ = ()
