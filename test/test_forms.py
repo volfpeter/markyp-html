@@ -1,17 +1,4 @@
-from markyp_html.forms import form,\
-                              button,\
-                              option,\
-                              optgroup,\
-                              datalist,\
-                              fieldset,\
-                              input_,\
-                              label,\
-                              legend,\
-                              meter,\
-                              output,\
-                              progress,\
-                              select,\
-                              textarea
+from markyp_html.forms import *
 
 def test_form():
     assert str(form("First", "Second", action="/action_page.php", method="get")) ==\
