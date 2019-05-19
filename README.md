@@ -1,3 +1,7 @@
+[![Downloads](https://pepy.tech/badge/markyp-html)](https://pepy.tech/project/markyp-html)
+[![Downloads](https://pepy.tech/badge/markyp-html/month)](https://pepy.tech/project/markyp-html/month)
+[![Downloads](https://pepy.tech/badge/markyp-html/week)](https://pepy.tech/project/markyp-html/week)
+
 # markyp-html
 
 [markyp](https://github.com/volfpeter/markyp)-based HTML implementations.
