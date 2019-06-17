@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/volfpeter/markyp-html.svg?branch=master)](https://travis-ci.org/volfpeter/markyp-html)
 [![Downloads](https://pepy.tech/badge/markyp-html)](https://pepy.tech/project/markyp-html)
 [![Downloads](https://pepy.tech/badge/markyp-html/month)](https://pepy.tech/project/markyp-html/month)
 [![Downloads](https://pepy.tech/badge/markyp-html/week)](https://pepy.tech/project/markyp-html/week)
