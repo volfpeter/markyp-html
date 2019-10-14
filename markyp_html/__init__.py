@@ -14,7 +14,7 @@ __copyright__ = "Copyright 2019, Peter Volf"
 __email__ = "do.volfp@gmail.com"
 __license__ = "MIT"
 __url__ = "https://github.com/volfpeter/markyp-html"
-__version__ = "0.1906.0"
+__version__ = "0.1910.0"
 
 
 __all__ = ("DOCTYPE", "html", "head", "body", "base", "title", "link", "meta", "script", "style")
