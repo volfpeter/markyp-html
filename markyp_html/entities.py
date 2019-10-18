@@ -6,8 +6,22 @@ from markyp import IElement
 
 
 __all__ = (
-    "Entity", "amp", "apos", "cent", "copy", "euro", "gt",
-    "lt", "nbsp", "pound", "quot", "reg", "times", "yen"
+    "Entity",
+    "amp",
+    "apos",
+    "cent",
+    "copy",
+    "euro",
+    "gt",
+    "lt",
+    "mdash",
+    "nbsp",
+    "ndash",
+    "pound",
+    "quot",
+    "reg",
+    "times",
+    "yen",
 )
 
 
@@ -30,67 +44,77 @@ class Entity(IElement):
         return self.value
 
 
-amp: Entity = Entity("&amp;")
+amp = Entity("&amp;")
 """
 Ampersand entity.
 """
 
-apos: Entity = Entity("&apos;")
+apos = Entity("&apos;")
 """
 Single quotation mark (apostrophe) entity.
 """
 
-cent: Entity = Entity("&cent;")
+cent = Entity("&cent;")
 """
 Cent entity.
 """
 
-copy: Entity = Entity("&copy;")
+copy = Entity("&copy;")
 """
 Copyright entity.
 """
 
-euro: Entity = Entity("&euro;")
+euro = Entity("&euro;")
 """
 Euro entity.
 """
 
-gt: Entity = Entity("&gt;")
+gt = Entity("&gt;")
 """
 Greater than entity.
 """
 
-lt: Entity = Entity("&lt;")
+lt = Entity("&lt;")
 """
 Less than entity.
 """
 
-nbsp:Entity = Entity("&nbsp;")
+mdash = Entity("&mdash;")
+"""
+Em dash entity.
+"""
+
+nbsp = Entity("&nbsp;")
 """
 Non-breaking space entity.
 """
 
-pound: Entity = Entity("&pound;")
+ndash = Entity("&ndash;")
+"""
+En dash entity.
+"""
+
+pound = Entity("&pound;")
 """
 Pound entity.
 """
 
-quot: Entity = Entity("&quot;")
+quot = Entity("&quot;")
 """
 Double quotation mark entity.
 """
 
-reg: Entity = Entity("&reg;")
+reg = Entity("&reg;")
 """
 Registered trademark entity.
 """
 
-times: Entity = Entity("&times;")
+times = Entity("&times;")
 """
 Multiplication (X) entity.
 """
 
-yen: Entity = Entity("&yen;")
+yen = Entity("&yen;")
 """
 Yen entity.
 """
