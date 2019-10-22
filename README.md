@@ -57,7 +57,7 @@ print(html)
 
 `markyp-html` is built on [markyp](https://github.com/volfpeter/markyp). In general, extensions follow the `markyp-{domain-or-extension-name}` naming convention.
 
-Here is a list of extension built on top of `markyp-html`:
+Here is a list of extensions built on top of `markyp-html`:
 
 - `markyp-bootstrap4`: Bootstrap 4 implementation at https://github.com/volfpeter/markyp-bootstrap4, contribution is welcome.
 - `markyp-fontawesome`: Font Awesome icons for `markyp-html`-based web pages at https://github.com/volfpeter/markyp-fontawesome, contribution is welcome.
