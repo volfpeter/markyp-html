@@ -59,8 +59,9 @@ print(html)
 
 Here is a list of extension built on top of `markyp-html`:
 
-- `markyp-highlightjs`: Code highlighting in HTML using `highlight.js` at https://github.com/volfpeter/markyp-highlightjs, contribution is welcome.
 - `markyp-bootstrap4`: Bootstrap 4 implementation at https://github.com/volfpeter/markyp-bootstrap4, contribution is welcome.
+- `markyp-fontawesome`: Font Awesome icons for `markyp-html`-based web pages at https://github.com/volfpeter/markyp-fontawesome, contribution is welcome.
+- `markyp-highlightjs`: Code highlighting in HTML using `highlight.js` at https://github.com/volfpeter/markyp-highlightjs, contribution is welcome.
 
 If you have created an open source `markyp-html` extension, please let us know and we will include your project in this list.
 
