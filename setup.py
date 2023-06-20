@@ -62,6 +62,7 @@ setup(
     ],
     keywords="html markup generator utility",
     packages=find_packages(exclude=["test"]),
+    package_data={"markyp_html": ["py.typed"]},
     python_requires=">=3.6",
     install_requires=requirements
 )
