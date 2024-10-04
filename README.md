@@ -7,6 +7,8 @@
 
 [markyp](https://github.com/volfpeter/markyp)-based HTML implementations.
 
+**Note**: if you're in an **async** environment, you should use [htmy](https://volfpeter.github.io/htmy/) instead! 
+
 ## Installation
 
 The project is listed on the Python Package Index, it can be installed simply by executing `pip install markyp-html`.
